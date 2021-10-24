@@ -21,7 +21,7 @@ const styles = {
         height: 600,
         width: "10%",
         backgroundColor: "cyan",
-        color: "black",
+        color: "white",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
