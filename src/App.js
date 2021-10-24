@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from "react";
+import Body from "./components/Body";
+// import BoxChildren from "./components/BoxChildren";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  
+  state = {
+    }
+
+  render() {
+    return (
+      <div style={styles.box}>
+        <div>
+          <Header />
+        </div>
+        <div style={styles.display}>
+          <Sidebar />
+          <Body />
+        </div>
+        <div>
+          <Footer />
+        </div>
+      </div>
+    );
+  }
+}
+
+const styles = {
+  box: {
+    height: "auto",
+    width: "100%",
+  },
+  display: {
+    display: "flex"
+  }
 }
 
 export default App;
