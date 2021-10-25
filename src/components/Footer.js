@@ -6,7 +6,7 @@ export class Footer extends Component {
         return (
 
             <div style={styles.footer}>
-                <h1>Footer</h1>
+                <h4>Copyright Zaldana</h4>
                 <br />
             </div >
 

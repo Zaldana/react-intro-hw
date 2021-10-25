@@ -6,7 +6,7 @@ export class Header extends Component {
         return (
             
             <div style={styles.header}>
-                    <h1>Header</h1>
+                    <h2>Ruben Zaldana</h2>
                 <br />
             </div >
 
