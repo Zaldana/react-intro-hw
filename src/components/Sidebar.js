@@ -3,6 +3,24 @@ import React, { Component } from 'react'
 export class Sidebar extends Component {
     
     state = {
+        //COLOR OBJECTS array
+        colorArray: [
+            {
+                id: 0,
+                color: "blue",
+            },
+            {
+                id: 1,
+                color: "red",
+            },
+            {
+                id: 2,
+                color: "green",
+            },
+        ],
+
+        //css STYLES
+
         height: 650,
         width: "15%",
         backgroundColor: "white",
@@ -12,39 +30,31 @@ export class Sidebar extends Component {
         justifyContent: "center",
         alignItems: "center",
         border: "solid 3px black"
+        
+
     };
 
-    handleBlack = () => {
+    //color change function pasing color from color object array
+    handleColor = (color) => {
         this.setState({
-            backgroundColor: "black",
-            color: "white"
+            backgroundColor: color,
         });
+        console.log(color);
+        console.log(this.state);
     };
-
-    handleAqua = () => {
-        this.setState({
-            backgroundColor: "aquamarine",
-            color: "black"
-        });
-    };
-
-    handleOrange = () => {
-        this.setState({
-            backgroundColor: "orange",
-            color: "black"
-        });
-    };
-
 
     render() {
 
         return (
 
+            //set styles from state
             <div style={this.state}>
                 <ul>
-                    <li>Black<button onClick={this.handleBlack}>Click </button></li>
-                    <li>Aqua<button onClick={this.handleAqua}>Click </button></li>
-                    <li>Orange<button onClick={this.handleOrange}>Click </button></li>
+                    {/* map colorArray to ul list and pass as paramater to handleColor function  */}
+                    {this.state.colorArray.map(({ color, id }) => (
+                        <li key={id}>{color}<button onClick={() => this.handleColor(color)}>Click</button>
+                        </li>
+                    ))}
                 </ul>
             </div >
 

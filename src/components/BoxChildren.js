@@ -6,7 +6,7 @@ export class BoxChildren extends Component {
         return (
 
             <div>
-                <img src="https://i.redd.it/1ekqc7v7t5a31.jpg" style={styles.image} />
+                <img src={this.props.name} alt="" style={styles.image} />
             </div >
 
         );
